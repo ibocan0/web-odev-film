@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CineVault</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>🎞️ CineVault</h1>
+
+    <div class="controls">
+      <input id="searchInput" type="text" placeholder="Film ara..." />
+
+      <select id="categorySelect">
+        <option value="all">Tümü</option>
+        <option value="Aksiyon">Aksiyon</option>
+        <option value="Macera">Macera</option>
+        <option value="Komedi">Komedi</option>
+        <option value="Dram">Dram</option>
+        <option value="Fantastik">Fantastik</option>
+        <option value="Korku">Korku</option>
+        <option value="Müzikal">Müzikal</option>
+        <option value="Gizem">Gizem</option>
+        <option value="Romantizm">Romantizm</option>
+        <option value="Bilim Kurgu">Bilim Kurgu</option>
+        <option value="Spor">Spor</option>
+        <option value="Gerilim">Gerilim</option>
+      </select>
+
+      <select id="yearSelect">
+        <option value="all">Yıl (Tümü)</option>
+      </select>
+
+      <button id="showFavoritesBtn">ᥫ᭡ Favorilerim</button>
+      <button id="showAllBtn" class="secondary">Tüm Liste</button>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Kartlar -->
+    <section id="grid" class="grid"></section>
+
+    <!-- Modal (Detay Popup) -->
+    <div id="detailModal" class="modal hidden">
+        <div id="modalBackdrop" class="modal-backdrop"></div>
+      
+        <div class="modal-content">
+          <button id="modalClose" class="modal-close">✕</button>
+          <section id="detail"></section>
+        </div>
+      </div>      
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
