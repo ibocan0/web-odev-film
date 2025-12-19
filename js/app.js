@@ -33,6 +33,10 @@ const toggleFavorite = (id) => {
   const updated = favs.includes(id) ? favs.filter((x) => x !== id) : [...favs, id];
   localStorage.setItem(FAVORITES_KEY, JSON.stringify(updated));
 };
+if (filteredMovies.length === 0) {
+  movieList.innerHTML = "<p>No results found.</p>";
+  return;
+}
 
 /* -------------------- Filters -------------------- */
 const buildYearOptions = (items) => {
